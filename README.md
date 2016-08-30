@@ -2,6 +2,10 @@
 
 some examples which use nodegit@0.15.1 to perform git operations.
 
+## sys requirement
+
+Centos 7(3.10.0-229.el7.x86_64)
+
 ## basic concepts
 
 Git四种对象:
