@@ -7,7 +7,6 @@ const Git = require('nodegit');
 const _ = require('underscore');
 const common = require('./common');
 const cnst = require('./constant');
-const heapdump = require('heapdump');
 
 let gitAddCommit = (files) => {
 	let index, repo, oid;
