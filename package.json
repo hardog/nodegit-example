@@ -1,0 +1,24 @@
+{
+  "name": "nodegit-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hardog/nodegit-example.git"
+  },
+  "author": "hardog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hardog/nodegit-example/issues"
+  },
+  "homepage": "https://github.com/hardog/nodegit-example#readme",
+  "dependencies": {
+    "nodegit": "^0.15.1",
+    "promisify-node": "latest",
+    "underscore": "^1.8.3"
+  }
+}
