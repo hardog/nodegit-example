@@ -11,8 +11,8 @@ exports.test_git_path = 'tmp/testTask/.git';
 exports.test_file_path = 'tmp/testTask/';
 
 // git用户名/用户邮箱 
-exports.commiter_name = 'your name';
-exports.commiter_email = 'your email';
+exports.commiter_name = 'your commit name';
+exports.commiter_email = 'your commit email';
 
 // get_branch文件使用的分支名
 exports.master_branch_name = 'master';
@@ -21,5 +21,5 @@ exports.checkout_branch = 'test_checkout';
 exports.new_branch_name = 'new_branch';
 
 // git账号密码
-exports.account = 'your account';
-exports.password = 'your password';
+exports.account = 'your git name';
+exports.password = 'your git password';

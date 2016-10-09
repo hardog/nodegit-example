@@ -16,9 +16,9 @@ exports.get_commiter_sign = (cnst) => {
 	);
 };
 
-exports.create_files = (dir, num, timestamp) => {
-	let promises = [];
-	let dummyData = `
+let pourDummyData = function(size){
+	let dummyData = '';
+	let dummyUnit = `
 		HH 		HH   HHHHHHH
 		HH 		HH     HHH
 		HH 		HH 	   HHH
@@ -31,11 +31,23 @@ exports.create_files = (dir, num, timestamp) => {
 		HH 		HH   HHHHHHH
 	`;
 
+	size = size || 50000;
+	for(let i = 0; i < size; i++){
+		dummyData += dummyUnit;
+	}
+
+	return dummyData;
+};
+
+exports.create_files = (dir, num, timestamp) => {
+	let promises = [];
+	let dummyData = pourDummyData();
+
 	for(let i = 0; i < num; i++){
 		promises.push(new Promise((resolve, reject) => {
-			fs.mkdirSync(`${cnst.test_file_path}${dir}_${i}/`);
-			fs.writeFile(`${cnst.test_file_path}${dir}_${i}/${timestamp + i}.html`, dummyData, () => {
-				resolve(`${dir}_${i}/${timestamp + i}.html`);
+			fs.mkdirSync(`${cnst.test_file_path}${dir}_${i}_${timestamp}_tt/`);
+			fs.writeFile(`${cnst.test_file_path}${dir}_${i}_${timestamp}_tt/${timestamp + i}.html`, dummyData, () => {
+				resolve(`${dir}_${i}_${timestamp}_tt/${timestamp + i}.html`);
 			});
 		}));
 	}
